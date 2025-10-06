@@ -1,0 +1,16 @@
+seed: 42
+paths:
+  raw: "data/raw"
+  interim: "data/interim"
+  processed: "data/processed"
+  models: "app/models"
+dataset:
+  name: "uci_phishing_websites"
+  filename: "phishing.csv"
+split:
+  test_size: 0.2
+  stratify: true
+model:
+  type: "logistic_regression"
+  params:
+    max_iter: 1000

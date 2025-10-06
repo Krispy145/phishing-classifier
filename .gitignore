@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/interim/
+data/processed/
+app/models/
+.vscode/
+.idea/
+.DS_Store
