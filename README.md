@@ -108,13 +108,13 @@ python -m pytest tests/
 
 ## 🗓 Roadmap
 
-| Milestone                    | Target Date | Status     |
-| ---------------------------- | ----------- | ---------- |
-| Scaffold repo                | 12/10/2025  | ✅ Done    |
-| EDA and feature engineering  | 15/10/2025  | ⏳ Pending |
-| Train and export baseline    | 18/10/2025  | ⏳ Planned |
-| Model evaluation suite       | 20/10/2025  | ⏳ Planned |
-| Secure AI API integration    | 24/10/2025  | ⏳ Planned |
+| Milestone                    | Category                | Target Date | Status     |
+| ---------------------------- | ----------------------- | ----------- | ---------- |
+| Scaffold repo                | AI Engineering Projects | 12/10/2025  | ✅ Done    |
+| EDA and feature engineering  | AI Engineering Projects | 15/10/2025  | ⏳ Pending |
+| Train and export baseline    | AI Engineering Projects | 18/10/2025  | ⏳ Planned |
+| Model evaluation suite       | AI Engineering Projects | 20/10/2025  | ⏳ Planned |
+| Secure AI API integration    | AI Engineering Projects | 24/10/2025  | ⏳ Planned |
 
 ---
 
