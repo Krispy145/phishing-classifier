@@ -1,6 +1,6 @@
 # Phishing Website Classifier
 
-Foundations project to practice clean ML: preprocessing, baselines, evaluation, and a model artifact for serving via the Secure AI API.
+Supervised model to detect phishing: EDA, features, baselines, metrics.
 
 **Status:** scaffolded (initial repo setup)
 **Milestones:**
