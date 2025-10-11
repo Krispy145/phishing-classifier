@@ -1,4 +1,4 @@
-# Phishing Website Classifier
+# Phishing Classifier
 
 Supervised model to detect phishing: EDA, features, baselines, metrics.
 
@@ -6,28 +6,25 @@ Supervised model to detect phishing: EDA, features, baselines, metrics.
 
 ## 📈 Status
 
-- **Status:** scaffolded (initial setup complete)
-- **Focus:** Machine learning fundamentals, feature engineering, and model evaluation
-- **Last updated:** 07/10/2025
-- **Upcoming integration:** Secure AI API (as inference backend)
+- **Status:** active (Active)
+- **Focus:** Supervised model to detect phishing: EDA, features, baselines, metrics.
+- **Last updated:** 11/10/2025
+- **Target completion:** 20/10/2025
 
 ---
 
 ## 🔑 Highlights
 
-- **Dataset:** UCI Phishing Websites Dataset with 11,055 samples
-- **Features:** 30 engineered features (URL length, domain age, suspicious patterns)
-- **Models:** Multiple baseline algorithms (Logistic Regression, Random Forest, SVM)
-- **Evaluation:** Comprehensive metrics (accuracy, precision, recall, F1-score)
-- **Pipeline:** End-to-end ML workflow from EDA to model export
-- **Export:** Pickle serialization for API integration
-- **Testing:** Cross-validation and holdout testing strategies
+- **Dataset** → UCI Phishing Websites Dataset with 11,055 samples
+- **Features** → 30 engineered features (URL length, domain age, suspicious patterns)
+- **Models** → Multiple baseline algorithms (Logistic Regression, Random Forest, SVM)
+- **Evaluation** → Comprehensive metrics (accuracy, precision, recall, F1-score)
+- **Pipeline** → End-to-end ML workflow from EDA to model export
+- **Export** → Pickle serialization for API integration
 
 ---
 
 ## 🏗 Architecture Overview
-
-Clean ML pipeline with modular components:
 
 ```
 src/
@@ -38,11 +35,11 @@ src/
 
 **Patterns used:**
 
-- `load.py` handles data ingestion and validation
-- `preprocess.py` performs feature engineering and scaling
-- `train.py` implements model training with cross-validation
-- `evaluate.py` provides comprehensive model evaluation
-- `pipeline.py` orchestrates the entire ML workflow
+- **load.py** handles data ingestion and validation
+- **preprocess.py** performs feature engineering and scaling
+- **train.py** implements model training with cross-validation
+- **evaluate.py** provides comprehensive model evaluation
+- **pipeline.py** orchestrates the entire ML workflow
 
 ---
 
@@ -52,7 +49,6 @@ src/
 - Feature engineering and data preprocessing techniques
 - Model training, evaluation, and comparison
 - Production-ready model export and serialization
-- Clean, maintainable ML code architecture
 
 ---
 
@@ -65,22 +61,14 @@ pip install -r requirements.txt
 ```
 
 **Run the full pipeline:**
-
 ```bash
 python src/pipeline.py
 ```
 
 **Train specific models:**
-
 ```bash
 python src/models/train.py --model logistic_regression
 python src/models/train.py --model random_forest
-```
-
-**Evaluate models:**
-
-```bash
-python src/models/evaluate.py --model-path models/logistic_regression.pkl
 ```
 
 ---
@@ -99,22 +87,23 @@ python -m pytest tests/
 
 ## 🔒 Security & Next Steps
 
-- Follow secure ML practices (data validation, model versioning)
-- Integrate with **Secure AI API** for real-time inference
-- Add **model monitoring** and performance tracking
-- Implement **A/B testing** for model comparison
+- Follow security best practices for the technology stack
+- Implement proper authentication and authorization
+- Add comprehensive error handling and validation
+- Set up monitoring and logging
 
 ---
 
 ## 🗓 Roadmap
 
-| Milestone                    | Category                | Target Date | Status     |
-| ---------------------------- | ----------------------- | ----------- | ---------- |
-| Scaffold repo                | AI Engineering Projects | 12/10/2025  | ✅ Done    |
-| EDA and feature engineering  | AI Engineering Projects | 15/10/2025  | ⏳ Pending |
-| Train and export baseline    | AI Engineering Projects | 18/10/2025  | ⏳ Planned |
-| Model evaluation suite       | AI Engineering Projects | 20/10/2025  | ⏳ Planned |
-| Secure AI API integration    | AI Engineering Projects | 24/10/2025  | ⏳ Planned |
+| Milestone                    | Category              | Target Date | Status     |
+| ---------------------------- | --------------------- | ----------- | ---------- |
+| Scaffold repo | AI Engineering Projects | 12/10/2025 | ✅ Done |
+| EDA and feature engineering | AI Engineering Projects | 15/10/2025 | ⏳ In Progress |
+| Train and export baseline | AI Engineering Projects | 18/10/2025 | ⏳ In Progress |
+| Model evaluation suite | AI Engineering Projects | 20/10/2025 | ⏳ In Progress |
+| Secure AI API integration | AI Engineering Projects | 24/10/2025 | ⏳ In Progress |
+
 
 ---
 
