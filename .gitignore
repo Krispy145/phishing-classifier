@@ -8,3 +8,4 @@ app/models/
 .vscode/
 .idea/
 .DS_Store
+private_docs/
