@@ -5,12 +5,17 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import logging
+import yaml
 
 from src.data.load import load_raw
 from src.data.preprocess import split_xy, make_splits
 from src.features.pipeline import create_feature_pipeline
 from src.models.train import train_and_save
-from src.models.evaluate import evaluate
+from src.models.evaluate import evaluate, print_evaluation_summary
+
+# Load configuration
+with open("config/config.yaml") as f:
+    CFG = yaml.safe_load(f)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -107,21 +112,33 @@ def main():
         # Stage 5: Model Evaluation
         if args.stage in ("all", "eval"):
             logger.info("Evaluating model...")
-            model_path = Path("app/models/model.joblib")
+            model_path = Path(CFG["paths"]["models"]) / "model.joblib"
             if not model_path.exists():
                 raise SystemExit("No model found. Run with --stage train first.")
             
             model = joblib.load(model_path)
-            metrics = evaluate(model, X_test, y_test)
+            
+            # Get evaluation output directory
+            eval_dir = Path(CFG["paths"]["evaluations"])
+            eval_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Run comprehensive evaluation
+            # For eval-only stage, we need to retrain for cross-validation
+            # For all stage, we already have X_train/y_train
+            results = evaluate(
+                model, 
+                X_test, 
+                y_test,
+                X_train=X_train,
+                y_train=y_train,
+                save_dir=eval_dir,
+                generate_plots=CFG.get("evaluation", {}).get("generate_plots", True)
+            )
+            
+            # Print formatted summary
+            print_evaluation_summary(results)
             
             logger.info("Model evaluation complete")
-            logger.info(f"Metrics: {metrics}")
-            print("\n" + "="*50)
-            print("MODEL EVALUATION RESULTS")
-            print("="*50)
-            for metric, value in metrics.items():
-                print(f"{metric}: {value:.4f}")
-            print("="*50)
 
         logger.info("Pipeline execution completed successfully!")
 

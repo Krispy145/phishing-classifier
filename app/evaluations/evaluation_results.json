@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-11-12T15:51:03.157368",
+  "model_type": "LogisticRegression",
+  "test_set_size": 200,
+  "metrics": {
+    "accuracy": 1.0,
+    "precision_weighted": 1.0,
+    "recall_weighted": 1.0,
+    "f1_weighted": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0
+  },
+  "per_class_metrics": {
+    "precision": [
+      1.0,
+      1.0
+    ],
+    "recall": [
+      1.0,
+      1.0
+    ],
+    "f1": [
+      1.0,
+      1.0
+    ]
+  },
+  "confusion_matrix": [
+    [
+      100,
+      0
+    ],
+    [
+      0,
+      100
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200.0
+    }
+  },
+  "cross_validation": {
+    "mean": 0.9949995116538904,
+    "std": 0.004677724338754066,
+    "scores": [
+      0.9937497558498378,
+      1.0,
+      0.9874980465697766,
+      1.0,
+      0.9937497558498378
+    ]
+  },
+  "plots_generated": true,
+  "plot_dir": "app/evaluations"
+}
