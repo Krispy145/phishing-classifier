@@ -44,6 +44,27 @@ python3 scripts/download_uci_dataset.py
 - Error handling and fallbacks
 - Progress reporting
 
+#### `sync_model_to_api.py`
+Syncs the trained model to the Secure AI API for integration.
+
+**Usage:**
+```bash
+python3 scripts/sync_model_to_api.py
+```
+
+**What it does:**
+- Copies `app/models/model.joblib` to `secure-ai-api/app/models/model.joblib`
+- Verifies the copy was successful
+- Provides status feedback
+
+**Prerequisites:**
+- Model must be trained first (`python src/pipeline.py`)
+- Both repositories must be in the same parent directory
+
+**Output:**
+- Model copied to `secure-ai-api/app/models/model.joblib`
+- Status messages indicating success or failure
+
 ## 🚀 Quick Start
 
 ### **1. Create Sample Dataset (Immediate Testing)**
